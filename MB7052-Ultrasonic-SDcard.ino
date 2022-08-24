@@ -40,29 +40,6 @@ void setup() {
     // 파일이 열리지 않으면 에러를 출력합니다.
     Serial.println("error opening test.txt");
   }
-
-  Serial.begin(9600);
-  
-  Serial.print("Initializing SD card...");
-  if (!SD.begin(4)) { // SD카드 모듈을 초기화합니다.
-    Serial.println("initialization failed!"); // SD카드 모듈 초기화에 실패하면 에러를 출력합니다.
-    while (1);
-  }
-  Serial.println("initialization done.");
-
-  // 파일을 열어 쓸 준비를 합니다. 한 번에 하나의 파일만 열 수 있습니다.
-  myFile = SD.open("ultra.txt", FILE_WRITE); // 두 번째 인자가 있으면 쓰기모드입니다.
-
-  if (myFile) { 
-    myFile.close(); // 파일을 닫습니다.
-    Serial.println("done.");
-  } else {
-    // 파일이 열리지 않으면 에러를 출력합니다.
-    Serial.println("error opening test.txt");
-  }
-  
-  pinMode(pwPin1, INPUT); 
-
 }
 
 void read_sensor (){
