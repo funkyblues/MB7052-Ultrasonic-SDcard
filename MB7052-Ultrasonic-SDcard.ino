@@ -16,7 +16,7 @@ long sensor, mm, inches;
 
 
 void setup() {
-rtc.stopRTC();            //정지
+  rtc.stopRTC();            //정지
   rtc.setTime(8, 53, 00);  //시, 분, 초
   rtc.setDate(13, 8, 2022); //일, 월, 년
   rtc.startRTC();           //시작
@@ -39,10 +39,7 @@ rtc.stopRTC();            //정지
   } else {
     // 파일이 열리지 않으면 에러를 출력합니다.
     Serial.println("error opening test.txt");
-  }rtc.stopRTC();            //정지
-  rtc.setTime(10, 00, 00);  //시, 분, 초
-  rtc.setDate(11, 8, 2022); //일, 월, 년
-  rtc.startRTC();           //시작
+  }
 
   Serial.begin(9600);
   
